@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private final String TAG = "MAIN_ACTIVITY";
     private int num = 1;
     private TextView textView;
     private Button btn;
@@ -25,13 +26,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
 
         textView.setText(String.valueOf(num));
-        Log.d("MAIN_ACTIVITY", "onCreate");
+        Log.d(TAG, "onCreate");
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.d("MAIN_ACTIVITY", "onRestoreInstanceState");
+        Log.d(TAG, "onRestoreInstanceState");
 
         Bundle b = savedInstanceState.getBundle("key");
         if (b != null) {
@@ -43,37 +44,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("MAIN_ACTIVITY", "onRestart");
+        Log.d(TAG, "onRestart");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("MAIN_ACTIVITY", "onStart");
+        Log.d(TAG, "onStart");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("MAIN_ACTIVITY", "onPause");
+        Log.d(TAG, "onPause");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("MAIN_ACTIVITY", "onResume");
+        Log.d(TAG, "onResume");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("MAIN_ACTIVITY", "onStop");
+        Log.d(TAG, "onStop");
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d("MAIN_ACTIVITY", "onSaveInstanceState");
+        Log.d(TAG, "onSaveInstanceState");
 
         Bundle b = outState.getBundle("key");
         if (b == null) {
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("MAIN_ACTIVITY", "onDestroy");
+        Log.d(TAG, "onDestroy");
     }
 
     @Override
